@@ -26,7 +26,7 @@ U 1 1 5ADCD481
 P 3800 2400
 F 0 "U2" H 3050 3650 60  0000 C CNN
 F 1 "keyplus_mini" H 3800 3650 60  0000 C CNN
-F 2 "keyplus:keyplus_mini_v3" H 3800 2400 60  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x13_Pitch2.54mm" H 3800 2400 60  0001 C CNN
 F 3 "" H 3800 2400 60  0001 C CNN
 	1    3800 2400
 	1    0    0    -1  
@@ -34,12 +34,12 @@ $EndComp
 $Comp
 L nRF24L01_module U1
 U 1 1 5ADCD4B6
-P 1450 1750
-F 0 "U1" H 1000 2400 60  0000 C CNN
-F 1 "nRF24L01_module" H 1900 1100 60  0000 C CNN
-F 2 "nordic:NRF24L01-Module-SMD-TH" H 1450 1700 60  0001 C CNN
-F 3 "" H 1450 1700 60  0001 C CNN
-	1    1450 1750
+P 1450 1800
+F 0 "U1" H 1000 2450 60  0000 C CNN
+F 1 "nRF24L01_module" H 1900 1150 60  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 1450 1750 60  0001 C CNN
+F 3 "" H 1450 1750 60  0001 C CNN
+	1    1450 1800
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -772,32 +772,6 @@ Connection ~ 750  6450
 Connection ~ 750  6950
 Connection ~ 750  7450
 Connection ~ 150  7400
-Text Label 2800 2500 2    60   ~ 0
-row0
-Text Label 2800 2600 2    60   ~ 0
-row1
-Text Label 2800 2700 2    60   ~ 0
-row2
-Text Label 2800 2800 2    60   ~ 0
-row3
-Text Label 2800 2900 2    60   ~ 0
-row4
-Text Label 4800 2350 0    60   ~ 0
-col0
-Text Label 4800 2450 0    60   ~ 0
-col1
-Text Label 4800 2550 0    60   ~ 0
-col2
-Text Label 4800 2650 0    60   ~ 0
-col3
-Text Label 4800 2750 0    60   ~ 0
-col4
-Text Label 4800 2850 0    60   ~ 0
-col5
-Text Label 4800 2950 0    60   ~ 0
-col6
-Text Label 4800 3050 0    60   ~ 0
-col7
 Text Label 2800 1650 2    60   ~ 0
 MOSI
 Text Label 2800 1750 2    60   ~ 0
@@ -810,17 +784,17 @@ Text Label 2800 2100 2    60   ~ 0
 IRQ
 Text Label 2800 2200 2    60   ~ 0
 CE
-Text Label 2150 2000 0    60   ~ 0
+Text Label 2150 2050 0    60   ~ 0
 IRQ
-Text Label 2150 1900 0    60   ~ 0
+Text Label 2150 1950 0    60   ~ 0
 MISO
-Text Label 2150 1800 0    60   ~ 0
+Text Label 2150 1850 0    60   ~ 0
 MOSI
-Text Label 2150 1700 0    60   ~ 0
+Text Label 2150 1750 0    60   ~ 0
 SCK
-Text Label 2150 1600 0    60   ~ 0
+Text Label 2150 1650 0    60   ~ 0
 CSN
-Text Label 2150 1500 0    60   ~ 0
+Text Label 2150 1550 0    60   ~ 0
 CE
 $Comp
 L +BATT #PWR01
@@ -845,29 +819,29 @@ F 3 "" H 5550 1950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2150 2200 2150 2350
+	2150 2250 2150 2400
 $Comp
 L GND #PWR03
 U 1 1 5ADE070A
-P 2150 2350
-F 0 "#PWR03" H 2150 2100 50  0001 C CNN
-F 1 "GND" H 2150 2200 50  0000 C CNN
-F 2 "" H 2150 2350 50  0001 C CNN
-F 3 "" H 2150 2350 50  0001 C CNN
-	1    2150 2350
+P 2150 2400
+F 0 "#PWR03" H 2150 2150 50  0001 C CNN
+F 1 "GND" H 2150 2250 50  0000 C CNN
+F 2 "" H 2150 2400 50  0001 C CNN
+F 3 "" H 2150 2400 50  0001 C CNN
+	1    2150 2400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2150 1300 2150 1150
+	2150 1350 2150 1200
 $Comp
 L +3V3 #PWR04
 U 1 1 5ADE0A2C
-P 2150 1150
-F 0 "#PWR04" H 2150 1000 50  0001 C CNN
-F 1 "+3V3" H 2150 1290 50  0000 C CNN
-F 2 "" H 2150 1150 50  0001 C CNN
-F 3 "" H 2150 1150 50  0001 C CNN
-	1    2150 1150
+P 2150 1200
+F 0 "#PWR04" H 2150 1050 50  0001 C CNN
+F 1 "+3V3" H 2150 1340 50  0000 C CNN
+F 2 "" H 2150 1200 50  0001 C CNN
+F 3 "" H 2150 1200 50  0001 C CNN
+	1    2150 1200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -893,4 +867,45 @@ Wire Wire Line
 	750  5950 4500 5950
 Text Label 4800 1950 0    60   ~ 0
 GND
+NoConn ~ 4800 1350
+NoConn ~ 4800 1450
+NoConn ~ 4800 1650
+NoConn ~ 4800 2150
+NoConn ~ 2800 3000
+NoConn ~ 2800 3200
+NoConn ~ 2800 3300
+NoConn ~ 2800 3400
+NoConn ~ 2800 3500
+NoConn ~ 4800 3500
+NoConn ~ 4800 3400
+NoConn ~ 4800 3300
+NoConn ~ 4800 3200
+NoConn ~ 2800 1350
+NoConn ~ 2800 1450
+Text Label 4800 3050 0    60   ~ 0
+col7
+Text Label 4800 2950 0    60   ~ 0
+col6
+Text Label 4800 2850 0    60   ~ 0
+col5
+Text Label 4800 2750 0    60   ~ 0
+col4
+Text Label 4800 2650 0    60   ~ 0
+col3
+Text Label 4800 2550 0    60   ~ 0
+col2
+Text Label 4800 2450 0    60   ~ 0
+col1
+Text Label 4800 2350 0    60   ~ 0
+col0
+Text Label 2800 2500 2    60   ~ 0
+row0
+Text Label 2800 2600 2    60   ~ 0
+row1
+Text Label 2800 2700 2    60   ~ 0
+row2
+Text Label 2800 2800 2    60   ~ 0
+row3
+Text Label 2800 2900 2    60   ~ 0
+row4
 $EndSCHEMATC
