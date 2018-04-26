@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/dwbrite/code/keebo/left/keebo_left.sch)
-    (date "Sun 22 Apr 2018 10:04:57 PM EDT")
+    (date "Mon 23 Apr 2018 01:46:35 AM EDT")
     (tool "Eeschema 4.0.7-e2-6376~58~ubuntu16.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -463,10 +463,10 @@
       (uri /home/dwbrite/code/keebo/dependencies/libraries/nordic.lib))
     (library (logical keyplus)
       (uri /home/dwbrite/code/keebo/dependencies/libraries/keyplus.lib))
-    (library (logical switches)
-      (uri /home/dwbrite/code/keebo/dependencies/libraries/switches.lib))
     (library (logical diode)
-      (uri /home/dwbrite/code/keebo/dependencies/libraries/diode.lib)))
+      (uri /home/dwbrite/code/keebo/dependencies/libraries/diode.lib))
+    (library (logical switches)
+      (uri /home/dwbrite/code/keebo/dependencies/libraries/switches.lib)))
   (nets
     (net (code 1) (name "Net-(D30-Pad2)")
       (node (ref D30) (pin 2))
