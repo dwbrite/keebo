@@ -1,3 +1,4 @@
 (fp_lib_table
-  (lib (name req)(type KiCad)(uri ${KIPRJMOD}/../dependencies/footprints/req.pretty)(options "")(descr ""))
+  (lib (name kbo_mx_lp_3d)(type KiCad)(uri ${KIPRJMOD}/../dependencies/footprints/dwbrite/smd/MX_LP.pretty)(options "")(descr ""))
+  (lib (name kbo_pads)(type KiCad)(uri ${KIPRJMOD}/../dependencies/footprints/dwbrite/Pads.pretty)(options "")(descr ""))
 )

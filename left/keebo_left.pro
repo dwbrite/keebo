@@ -1,4 +1,4 @@
-update=Date
+update=Mon 21 May 2018 10:37:26 PM EDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -30,10 +30,5 @@ version=1
 LibDir=../dependencies/libraries
 [eeschema/libraries]
 LibName1=diode
-LibName2=keyplus
-LibName3=nordic
-LibName4=power
-LibName5=rgb_led
-LibName6=switches
-LibName7=/home/dwbrite/code/keebo/dependencies/switches
-LibName8=conn
+LibName2=switches
+LibName3=conn
