@@ -29,11 +29,11 @@ def unitsToMm( units ):
 
 def getName(switch):
 	size = '{:<03}'.format(str(switch.keycap).replace(".", "")) if switch.keycap else ""
-	return baseName + '_' + size + '_' + switch.getTypeAsStr() 
+	return baseName + '_' + size + '_' + switch.getTypeAsStr()
 
 def genLine(start, end, layer, width):
 	line = "  (fp_line "
-	line += "(start " + str(start[0]) + " " + str(start[1]) + ") " 
+	line += "(start " + str(start[0]) + " " + str(start[1]) + ") "
 	line += "(end " + str(end[0]) + " " + str(end[1]) + ") "
 	line += "(layer " + layer + ") "
 	line += "(width " + width + "))\n"
@@ -42,7 +42,7 @@ def genLine(start, end, layer, width):
 def genRect(x, y, comment, layer, width):
 	outline = "  # " + comment + "\n"
 	coords = [ (-x, -y), ( x, -y), ( x,  y), (-x,  y) ]
-	for i in range(0, 4): 	
+	for i in range(0, 4):
 		n = (i+1)%4
 		outline += genLine(coords[i], coords[n], layer, str(width))
 	return outline
@@ -66,16 +66,19 @@ def genBody(switch):
 	body += genSwOutline()
 	body += genKeycapOutline(switch.keycap) if switch.keycap else ""
 
-	if switch.mx or switch.alps: 
+	if switch.mx or switch.alps:
+		if not switch.lp:
+			body += MX_SIDE_THRUHOLES(switch.padType) if switch.padType else MX_SIDE_THRUHOLES()
+			body += "\n"
 		body += MX_CENTER_THRUHOLE(switch.padType) if switch.padType else MX_CENTER_THRUHOLE()
 		body += "\n"
-	if switch.lp: 
+	if switch.lp:
 		body += LP_SIDE_THRUHOLES(switch.padType) if switch.padType else LP_SIDE_THRUHOLES()
 		body += "\n"
-		if not (switch.mx or switch.alps): 
+		if not (switch.mx or switch.alps):
 			body += LP_CENTER_THRUHOLE(switch.padType) if switch.padType else LP_CENTER_THRUHOLE()
 			body +="\n"
-		
+
 	if switch.mx:
 		body += MX_PINS(switch.padType) if switch.padType else MX_PINS()
 		if switch.solderless: body += MX_SOLDERLESS()
@@ -86,7 +89,7 @@ def genBody(switch):
 		body += "\n"
 	if switch.alps:
 		body += ALPS_PINS(switch.padType) if switch.padType else ALPS_PINS()
-	
+
 	if switch.useModel:
 		body += MODEL(switch)
 	return body

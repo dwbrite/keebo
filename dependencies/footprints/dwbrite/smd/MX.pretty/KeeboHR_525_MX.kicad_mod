@@ -19,6 +19,10 @@
   (fp_line (start 49.87925 9.398) (end -49.87925 9.398) (layer Dwgs.User) (width 0.1524))
   (fp_line (start -49.87925 9.398) (end -49.87925 -9.398) (layer Dwgs.User) (width 0.1524))
 
+  # MX/Alps side mounting holes
+  (pad "" smd circle (at -5.08 0) (size 1.7 1.7) (drill 1.7) (layers B.Cu B.Mask))
+  (pad "" smd circle (at 5.08 0) (size 1.7 1.7) (drill 1.7) (layers B.Cu B.Mask))
+
   # MX/Alps center mounting hole
   (pad "" smd circle (at 0 0) (size 4 4) (drill 4) (layers B.Cu B.Mask))
 
